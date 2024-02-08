@@ -19,8 +19,7 @@ let tags = {
   'fun': '🎉ᴅɪᴠᴇʀꜱɪᴏɴ🎉',
   'audio': 'ᴇꜰᴇᴄᴛᴏꜱ ᴅᴇ ᴀᴜᴅɪᴏꜱ', 
   'sticker': '🧸ꜱᴛɪᴄᴋᴇʀꜱ🧸',
-  'nsfw': '🔞 ɴꜱꜰᴡ 🔞',
-  'owner': '🐕 ᴄʀᴇᴀᴅᴏʀ 🐕',
+  'owner': '🇮🇩 ᴄʀᴇᴀᴅᴏʀ 🇮🇩',
   'advanced': 'ᴀᴠᴀɴᴢᴀᴅᴏ',
 }
 
@@ -30,7 +29,7 @@ const defaultMenu = {
 
 Hola *%taguser*,
 
-╭━─━─≪ɪɴꜰᴏ ᴛɪᴇᴍᴘᴏ≫─━─━╮
+╭━─━─≪ɪɴꜰᴏ ᴛɪᴇᴍᴘᴏ≫─━─━╮🥵
 ┆📆 ᴅɪᴀ: %week
 ┆📅 ꜰᴇᴄʜᴀ: %date
 ╰━─━─━≪ɪɴꜰᴏ ᴜꜱᴇʀ≫━─━─━╯
@@ -38,19 +37,19 @@ Hola *%taguser*,
 
 ╭━─━─━─≪ɪɴꜰᴏ ᴜꜱᴇʀ≫─━─━─━╮
 ┆ *ɴᴏᴍʙʀᴇ* : %name
-┆💎 *ᴅɪᴀᴍᴀɴᴛᴇꜱ* : %limit
+┆🇮🇩 *ᴅɪᴀᴍᴀɴᴛᴇꜱ* : %limit
 ┆🔰 *ɴɪᴠᴇʟ* : %level
 ┆✨ *xᴘ* : %totalexp
 ╰━─━─━─≪ɪɴꜰᴏ ᴜꜱᴇʀ≫─━─━─━╯
 %readmore
 ──────────────────────
 
-\t\t\t*C O M A N D O S*
+\t\t\t*LAS MAMADAS QUE PUEDES HACER CON EL BOT*
 `.trimStart(),
-  header: '╭───%category─────╮',
+  header: '╭───%category───',
   body: '│ *%cmd*\n',
-  footer: '╰──────────────────╯ ',
-  after: '\n*Jotchua - Bot - Mini*',
+  footer: '────────────────── ',
+  after: '\n*TryzerBot 🇮🇩*',
 }
 
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
@@ -155,8 +154,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-    let pp = 'https://telegra.ph/file/8adf82315f2b226833c27.mp4'
-    let pp2 = 'https://telegra.ph/file/8adf82315f2b226833c27.mp4'
+    let pp = 'https://telegra.ph/file/6588268dc27807d259026.mp4'
+    let pp2 = 'https://telegra.ph/file/6588268dc27807d259026.mp4'
     conn.sendMessage(m.chat, { video: { url: [pp, pp2].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
     
   } catch (e) {
