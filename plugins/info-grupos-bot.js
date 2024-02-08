@@ -1,7 +1,7 @@
 const handler = async (m, {conn, usedPrefix}) => {
   const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
   const document = doc[Math.floor(Math.random() * doc.length)];
-  const text = `*Hola Usuario, te invito a unirte a los grupos de jotchua - bot - mini para convivir con la comunidad :D*
+  const text = `*Hola hijo de tu madre, te invito a unirte a los grupos de Alexis y yo para convivir con la comunidad :D (son unos pendejos)*
 
                  ɢʀᴜᴘᴏꜱ ᴅᴇ ᴊᴏᴛᴄʜᴜᴀ-ʙᴏᴛ-ᴍɪɴɪ
        
@@ -12,7 +12,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 
 `.trim();
   const buttonMessage= {
-    'document': {url: `https://github.com/AleXD0009`},
+    'document': {url: `https://github.com/Sniperghost662009`},
     'mimetype': `application/${document}`,
     'fileName': `ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ`,
     'fileLength': 99999999999999,
