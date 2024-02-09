@@ -1,5 +1,5 @@
 {
-  "name": "Jotchua-mini",
+  "name": "TryzerBot",
   "version": "1.0.0",
   "description": "Bot Whatsapp",
   "main": "index.js",
@@ -16,16 +16,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/AleXD0009/jotchua-mini",
+  "homepage": "https://github.com/Sniperghost662009/Tryzer",
   "author": {
-    "name": "ALS"
+    "name": "Snipe"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AleXD0009/jotchua-mini.git"
+    "url": "git+https://github.com/Sniperghost662009/Tryzer.git"
   },
   "bugs": {
-    "url": "https://github.com/AleXD0009/jotchua-mini/issues"
+    "url": "https://github.com/Sniperghost662009/Tryzer/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
