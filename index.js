@@ -14,14 +14,14 @@ const {name, author} = require(join(__dirname, './package.json'));
 const {say} = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-say('Jotchua Mini', {
+say('Tryzer', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']});
 say(`bot by als`, {
   font: 'console',
   align: 'center',
-  gradient: ['red', 'magenta']});
+  gradient: ['blue', 'magenta']});
 
 let isRunning = false;
 /**
