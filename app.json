@@ -1,10 +1,10 @@
 {
-  "name": "Jotchua-bot",
-  "website": "https://github.com/AleXD0009",
-  "description": "BY ALS",
-  "repository": "https://github.com/AleXD0009/Jotchua-Bot",
-  "logo": "https://raw.githubusercontent.com/AleXD0009/Jotchua/master/src/pictures/heroku-icon.jpg",
-  "success_url": "https://github.com/AleXD0009/Jotchua-Bot",
+  "name": "Tryzer",
+  "website": "https://github.com/Sniperghost662009",
+  "description": "BY Snipe",
+  "repository": "https://github.com/Sniperghost662009/Tryzer",
+  "logo": "https://raw.githubusercontent.com/Sniperghost662009/Jotchua/master/src/pictures/heroku-icon.jpg",
+  "success_url": "https://github.com/Sniperghost662009/Tryzer",
   "keywords": [
     "nodejs",
     "heroku",
@@ -21,8 +21,8 @@
     "oficial",
     "whatsapp-md",
     "bot",
-    "Jotchua-bot",
-    "Jotchua-bot-md"],
+    "Tryzer",
+    "Tryzer"],
   "image": "heroku/nodejs",
   "buildpacks": [
     {
