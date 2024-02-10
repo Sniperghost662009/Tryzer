@@ -8,7 +8,6 @@ const handler = async (m, {conn, participants, usedPrefix, command}) => {
 };
 handler.command = /^(kick|echar|hechar|sacar|Eliminar|Funar)$/i;
 handler.admin = true;
-handler.owner = true;
 handler.group = true;
 handler.botAdmin = true;
 export default handler;
