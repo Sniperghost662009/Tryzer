@@ -10,7 +10,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         "mp3doc",
         "mp4doc"
     ]
-    let ytmsg = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "17608914335-1625305606@g.us" } : {}) }, message: { "extendedTextMessage": { "text":'Downloader YouTube', "title": 'Jotchua-Bot-Mini', 'jpegThumbnail': catalogo}}}
+    let ytmsg = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "17608914335-1625305606@g.us" } : {}) }, message: { "extendedTextMessage": { "text":'Downloader YouTube', "title": 'Tryzer-Bot', 'jpegThumbnail': catalogo}}}
     
     let [feature, inputs, inputs_, inputs__, inputs___] = text.split(" ")
     if (!lister.includes(feature)) return conn.reply(m.chat, `*🚩 Ingresa el formato en que deseas descargar más el titulo de un video o musica de YouTube.*\n\nEjemplo : ${usedPrefix + command} *mp3* SUICIDAL-IDOL - ecstacy\n\nFormatos disponibles :\n${usedPrefix + command} *mp3*\n${usedPrefix + command} *mp3doc*\n${usedPrefix + command} *mp4*\n${usedPrefix + command} *mp4doc*`, m, estilo)
@@ -29,7 +29,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
        txt += `│⛓ *Url ∙* ${'https://youtu.be/' + vid.videoId}\n`
        txt += `╰──────────\n\n`
 let buttonMessage= {
-'document': { url: `https://github.com/AleXD0009` },
+'document': { url: `https://github.com/Sniperghost662009` },
 'mimetype': `application/pdf`,
 'fileName': ` YᴏᴜTᴜʙᴇ Pʟᴀʏ 📥`,
 'fileLength': 99999999999999,
@@ -241,7 +241,7 @@ thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
        txt += `│⛓ *Url ∙* ${'https://youtu.be/' + vid.videoId}\n`
        txt += `╰──────────\n\n`
 let buttonMessage= {
-'document': { url: `https://github.com/AleXD0009` },
+'document': { url: `https://github.com/Sniperghost662009` },
 'mimetype': `application/pdf`,
 'fileName': ` YᴏᴜTᴜʙᴇ Pʟᴀʏ 📥`,
 'fileLength': 99999999999999,
