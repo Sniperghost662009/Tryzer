@@ -32,7 +32,7 @@ conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
 }
 
  
- if (/^so|zo|So|SO$/i.test(m.text) ) { //sin prefijo 
+ if (/^So|SO$/i.test(m.text) ) { //sin prefijo 
     let teks = `
 ${pickRandom([`_Quien putas sigue diciendo so? pendejo_`, `_Cual *so*, zorra tu madre_`])}
 `.trim()
