@@ -2,9 +2,9 @@ let handler = async (m, { conn, text}) => {
 
 m.reply(`${pickRandom(global.humornegro)}`)
 }
-handler.help = ['chistesnegros']
+handler.help = ['chiste']
 handler.tags = ['fun']
-handler.command = ['chistesnegros', 'humornegro']
+handler.command = ['chiste', 'humor']
 export default handler
 
 function pickRandom(list) {
