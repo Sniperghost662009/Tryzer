@@ -1,45 +1,44 @@
-import ws from 'ws';
-async function handler(m, { conn: _envio, usedPrefix }) {
-  const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
-  function convertirMsADiasHorasMinutosSegundos(ms) {
-  var segundos = Math.floor(ms / 1000);
-  var minutos = Math.floor(segundos / 60);
-  var horas = Math.floor(minutos / 60);
-  var días = Math.floor(horas / 24);
+import { Low, JSONFile } from 'lowdb'
 
-  segundos %= 60;
-  minutos %= 60;
-  horas %= 24;
+const adapter = new JSONFile('./jadibts/connections/stop.json')
+const db = new Low(adapter)
 
-  var resultado = "";
-  if (días !== 0) {
-    resultado += días + " días, ";
-  }
-  if (horas !== 0) {
-    resultado += horas + " horas, ";
-  }
-  if (minutos !== 0) {
-    resultado += minutos + " minutos, ";
-  }
-  if (segundos !== 0) {
-    resultado += segundos + " segundos";
-  }
+db.data = db.data === undefined || db.data === null ? { stop: {} } : db.data;
+let handler = async (m, { usedPrefix, conn, args, participants })=> {
+  let users = [...new Set([...global.conns.filter(conn => conn.isInit && conn.state !== 'close').map(conn => conn.user)])];
 
-  return resultado;
+  //let stop = db.data.stop;
+
+  //users = users.filter(user => !stop[user]); // filtra los usuarios que han usado el comando 'stop'
+
+  let int = '';
+  let count = 0;
+  let resp = `*🤖 Aquí tienes la lista de algunos sub bots (jadibot/serbot) 🤖️*\n\n*👉🏻 Puedes contactarlos para ver si se unen a tu grupo*\n\n*Te pedimos de favor que:*\n*1.- Seas amable ✅*\n*2.- No insistas ni discutas ✅*\n\n*✳ ️Si le aparece el siguiente texto en blanco es que no hay ningún Sub-Bot disponible en este momento inténtelo mas tarde*\n\n*_⚠ NOTA: ️ELLOS SON PERSONAS QUE NO CONOCEMOS.. POR LO QUE EL EQUIPO DE ${wm} NO SE HACE RESPONSABLE DE LO QUE PUEDA OCURRIR AHI.._*\n\n`
+  let uniqueUsers = users.filter((v, i, a) => a.findIndex(t => (t.jid === v.jid)) === i)
+
+  let SB = uniqueUsers.map((v, i) => `${i + 1}.  👉🏻 ${'@'}${v.jid.split`@`[0]}`).join`\n`
+  
+for (const c of resp) {
+      await new Promise(resolve => setTimeout(resolve, 15));
+      int += c;
+      count++;
+  
+      if (count % 10 === 0) {
+          conn.sendPresenceUpdate('composing' , m.chat);
+      }
+  }
+  await conn.sendMessage(m.chat, { text: int, mentions: conn.parseMention(resp) }, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100} )
+  for (const c of SB) {
+    await new Promise(resolve => setTimeout(resolve, 50));
+    int += c;
+    count++;
+
+    if (count % 10 === 0) {
+        conn.sendPresenceUpdate('composing' , m.chat);
+    }
 }
-
-  const message = users.map((v, index) => `*${index + 1}.-* @${v.user.jid.replace(/[^0-9]/g, '')}\n*Link:* wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado\n*Nombre:* ${v.user.name || '-'}\n*Uptime:* ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : "Desconocido"}`).join('\n\n');
-  const replyMessage = message.length === 0 ? '*No hay SubBots activos en estos momentos.*' : message;
-  const totalUsers = users.length;
-  const responseMessage = `
-𝐋𝐢𝐬𝐭𝐚 𝐃𝐞 𝐒𝐮𝐛𝐛𝐨𝐭𝐬 𝐂𝐨𝐧𝐞𝐜𝐭𝐚𝐝𝐨𝐬
-
-*𝙎𝙪𝙗𝙗𝙤𝙩𝙨 𝘼𝙘𝙩𝙞𝙫𝙤𝙨:* ${totalUsers || '0'}
-
-${replyMessage.trim()}`.trim();
-
-  await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: m});
+  await conn.sendMessage(m.chat, { text: SB, mentions: conn.parseMention(SB) }, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100} )
 }
-handler.command = handler.help = ['listjadibot', 'bots', 'subsbots'];
-handler.tags = ['jadibot'];
-export default handler;
+handler.command = handler.help = ['listjadibot','bots','subsbots']
+handler.tags = ['jadibot']
+export default handler                                
