@@ -31,9 +31,17 @@ conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
 
 }
 
-if (/^so|zo|So|SO$/i.test(m.text) ) { //sin prefijo 
+if (/^Borren el bot|Saquen al bot|funen al bot|Bot de mierda|Mierda de bot|Botzzz|Bots de Mierda|Funen al bot|saquen al bot|$/i.test(m.text) ) { //sin prefijo 
     let teks = `
-${pickRandom([`Quien putas sigue diciendo so? pendejo`, `_cual *so* zorra tu madre_`])}
+${pickRandom([`no me funes solo hago lo que mi creadi¿or me pide`, `_Yo solo hago mi tabajo_`])}
+`.trim()
+conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
+
+}
+ 
+ if (/^so|zo|So|SO$/i.test(m.text) ) { //sin prefijo 
+    let teks = `
+${pickRandom([`_Quien putas sigue diciendo so? pendejo_`, `_Cual *so*, zorra tu madre_`])}
 `.trim()
 conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
 
