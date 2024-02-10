@@ -46,8 +46,16 @@ if (/^hola|halo|hello|hi$/i.test(m.text) ) { //sin prefijo
 
  }
  
-if (/^¿que es un bot?|Que es un bot|Que es Tryzer?|q es un bot|Q es un bot?$/i.test(m.text) ) { //sem prefixo
-    conn.reply(m.chat, `╭┄〔 *${wm}* 〕┄⊱
+if (/^Borren el grupo|grupo de mierda|este grupo de mierda|Grupo de mierda$/i.test(m.text) ) { //sin prefijo 
+    let teks = `
+${pickRandom([`_Q gei_`, `_que_`, `_que quiere pija dice_`, `_mire un gilipolla_`, '_callate putito_'])}
+`.trim()
+conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
+
+ }
+ 
+ if (/^¿que es un bot?|Que es un bot|Que es Tryzer?|q es un bot|Q es un bot?$/i.test(m.text) ) { //sem prefixo
+    conn.reply(m.chat, `╭┄〔 *Tryzer* 〕┄⊱
 ┆ ——————«•»——————
 ┆ ☆::¿𝐐𝐮𝐞́ 𝐞𝐬 𝐮𝐧 𝐁𝐨𝐭 𝐝𝐞 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩?::☆
 ┆——————«•»——————
