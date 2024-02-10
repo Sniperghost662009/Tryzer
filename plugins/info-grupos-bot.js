@@ -3,7 +3,7 @@ const handler = async (m, {conn, usedPrefix}) => {
   const document = doc[Math.floor(Math.random() * doc.length)];
   const text = `*Hola hijo de tu madre, te invito a unirte a los grupos de Alexis y yo para convivir con la comunidad :D (son unos pendejos)*
 
-                 ɢʀᴜᴘᴏꜱ ᴅᴇ ᴊᴏᴛᴄʜᴜᴀ-ʙᴏᴛ-ᴍɪɴɪ
+    ɢʀᴜᴘᴏꜱ 
        
 ⎯⎯  \\\ 𝕭𝖔𝖙𝖘 /// ⎯⎯ https://chat.whatsapp.com/GR9pMnqYI8DB9HoJnl2HkB ⎯⎯  \\\ 𝕭𝖔𝖙𝖘 /// ⎯⎯
 
@@ -14,17 +14,17 @@ const handler = async (m, {conn, usedPrefix}) => {
   const buttonMessage= {
     'document': {url: `https://github.com/Sniperghost662009`},
     'mimetype': `application/${document}`,
-    'fileName': `ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ`,
+    'fileName': `Tryzer - ʙᴏᴛ`,
     'fileLength': 99999999999999,
     'pageCount': 200,
     'contextInfo': {
       'forwardingScore': 200,
       'isForwarded': true,
       'externalAdReply': {
-        'mediaUrl': 'https://github.com/AleXD0009',
+        'mediaUrl': 'https://github.com/Sniperghost662009',
         'mediaType': 2,
         'previewType': 'pdf',
-        'title': 'ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ⁩',
+        'title': 'Tryzer - ʙᴏᴛ',
         'body': wm,
         'thumbnail': imagen1,
         'sourceUrl': 'https://chat.whatsapp.com/GR9pMnqYI8DB9HoJnl2HkB'}},
