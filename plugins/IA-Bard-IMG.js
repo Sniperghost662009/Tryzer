@@ -20,7 +20,7 @@ conn.sendMessage(m.chat, { text: json.result }, { quoted: m })
 }
 handler.help = ['bardimg']
 handler.tags = ['ia']
-handler.command = /^(bardimg|bardimage)$/i
+handler.command = /^(bardimg|bardimage|iaimage|iaimg|Iaimg|IaImg)$/i
 
 
 export default handler
