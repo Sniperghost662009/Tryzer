@@ -31,3 +31,5 @@ Toca en WhatsApp 👇
 </p>
 
 * [`Mi grupo de WhatsApp`](https://chat.whatsapp.com/FVIYOp8HY8d2e4AwWG7Qr1)
+
+* readme copiado de https://github.com/kriz2004
