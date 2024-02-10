@@ -46,7 +46,7 @@ if (/^hola|halo|hello|hi$/i.test(m.text) ) { //sin prefijo
 
  }
  
-if (/^Borren el grupo|grupo de mierda|este grupo de mierda|Grupo de mierda$/i.test(m.text) ) { //sin prefijo 
+if (/^Borren el grupo|grupo de mierda|este grupo de mierda|Grupo de mierda|Este grupo muerto|Grupo muerto|GRUPO MUERTO|GRUPO DE MIERDA|BORREN EL GRUPO$/i.test(m.text) ) { //sin prefijo 
     let teks = `
 ${pickRandom([`_Q gei_`, `_que_`, `_que quiere pija dice_`, `_mire un gilipolla_`, '_callate putito_'])}
 `.trim()
