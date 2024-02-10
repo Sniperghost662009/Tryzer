@@ -31,13 +31,6 @@ conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
 
 }
 
-if (/^Borren el bot|Saquen al bot|funen al bot|Bot de mierda|Mierda de bot|Botzzz|Bots de Mierda|Funen al bot|saquen al bot|$/.test(m.text) ) { //sin prefijo 
-    let teks = `
-${pickRandom([`no me funes solo hago lo que mi creadi¿or me pide`, `_Yo solo hago mi tabajo_`])}
-`.trim()
-conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
-
-}
  
  if (/^so|zo|So|SO$/i.test(m.text) ) { //sin prefijo 
     let teks = `
