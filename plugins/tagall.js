@@ -15,7 +15,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
 };
 handler.help = ['tagall <mesaje>', 'invocar <mesaje>'];
 handler.tags = ['group'];
-handler.command = /^(tagall||invocacion|todos|invocación)$/i;
+handler.command = /^(tagall|invocacion|todos|invocación)$/i;
 handler.admin = true;
 handler.group = true;
 export default handler;
