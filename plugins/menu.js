@@ -44,7 +44,7 @@ Hola *%taguser*,
 %readmore
 ──────────────────────
 
-\t*LAS MAMADAS QUE PUEDES HACER CON EL BOT*
+*LAS MAMADAS QUE PUEDES HACER CON EL BOT*
 `.trimStart(),
   header: '╭───%category───',
   body: '│ *%cmd*\n',
