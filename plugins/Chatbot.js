@@ -29,7 +29,7 @@ ${pickRandom([`Que bueno sabe la letra A`, `AAAAAA`])}
 `.trim()
 conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
 
-}*/
+}
 
 if (/^reglas|normas|Reglas$/i.test(m.text) ) { //sin prefijo 
     conn.reply(m.chat, `╭┅〘 ⚠️ 𝗢𝗯𝗲𝗱𝗲𝗰𝗲 𝗹𝗮𝘀 𝗿𝗲𝗴𝗹𝗮𝘀 ⚠️ 〙*
@@ -44,7 +44,7 @@ if (/^reglas|normas|Reglas$/i.test(m.text) ) { //sin prefijo
 if (/^hola|halo|hello|hi$/i.test(m.text) ) { //sin prefijo 
      conn.reply(m.chat, `Hola :D`, fkontak, m)
 
- }*/
+ }
  
 if (/^¿que es un bot?|Que es un bot|Que es Tryzer?|q es un bot|Q es un bot?$/i.test(m.text) ) { //sem prefixo
     conn.reply(m.chat, `╭┄〔 *${wm}* 〕┄⊱
@@ -60,7 +60,7 @@ if (/^¿que es un bot?|Que es un bot|Que es Tryzer?|q es un bot|Q es un bot?$/i.
 ┆ 𝐏𝐚𝐫𝐚 𝐯𝐞𝐫 𝐞𝐥 𝐦𝐞𝐧𝐮́ 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬 𝐩𝐮𝐞𝐝𝐞𝐬 𝐮𝐬𝐚𝐫 .menu
 ┆ 
 ┆ 「 Tryzer 」
-╰━━━⊰  ${vs} ⊱━━━━დ*`, m) //wm, null, [['Menu', '#menu']], m) botones :V
+╰━━━⊰  ⊱━━━━დ*`, m) //wm, null, [['Menu', '#menu']], m) botones :V
 
 }  
 return !0 
