@@ -37,14 +37,14 @@ global.owner = [
 global.suittag = [''];
 global.prems = [''];
 //━━━━━━━STICKERS━━━━━━━━━━━━ 
-global.packname = 'ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ';
-global.author = 'ʙʏ ᴀʟꜱ';
+global.packname = 'TryzerBot';
+global.author = 'ʙʏ Snipe';
 //━━━━━━━━━━━━━━━━━━━━━━ 
 
-global.wm = 'ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ';
-global.titulowm = 'ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ';
-global.titulowm2 = `ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ`
-global.igfg = 'ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ';
+global.wm = 'TryzerBot';
+global.titulowm = 'TryzerBot';
+global.titulowm2 = `TryzerBot`
+global.igfg = 'TryzerBot';
 global.wait = '*Cargando...*';
 //━━━━━━━IMAGENES━━━━━━━━━━━━ 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -71,8 +71,8 @@ global.fgif = { key: {participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: 
 
 //━━━━━━━━━━━━━━━━━━━━━━ 
 
-global.addescargas = `ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ ʙʏ ᴀʟꜱ`
-global.adimagen = `ᴊᴏᴛᴄʜᴜᴀ - ʙᴏᴛ - ᴍɪɴɪ ʙʏ ᴀʟꜱ` 
+global.addescargas = `Tryzer ʙʏ Snipe`
+global.adimagen = `Tryzer ʙʏ Snipe` 
 
 //━━━━━━━━━━━━━━━━━━━━━━ 
 
