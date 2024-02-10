@@ -10,7 +10,7 @@ try {
    if(global.conns.push(conn))
     await conn.sendMessage(m.chat, {text : usedPrefix + 'jadibot' + " " + Buffer.from(fs.readFileSync("./jadibts/" + uniqid + "/creds.json"), "utf-8").toString("base64")}, { quoted: m })
   } catch(e) {
-   conn.reply(m.chat, `Usted no es un miembro de los Sub-Bots de este Bot(${wm}).\n\nPara poder ser Sub-bot use el comando *${usedPrefix + 'jadibot'}*\n\n En caso de que tu sesion no la puedas iniciar otra vez, borra la sesion creada en dispositivos vinculados y usa el comando *${usedPrefix + 'deletebot'}* para poder solicitar una nueva sesion`, m)
+   conn.reply(m.chat, `Usted no es un miembro de los Sub-Bots de este Bot(TryzerBot).\n\nPara poder ser Sub-bot use el comando *${usedPrefix + 'jadibot'}*\n\n En caso de que tu sesion no la puedas iniciar otra vez, borra la sesion creada en dispositivos vinculados y usa el comando *${usedPrefix + 'deletebot'}* para poder solicitar una nueva sesion`, m)
   }
 }
   handler.help = ['getcode']
