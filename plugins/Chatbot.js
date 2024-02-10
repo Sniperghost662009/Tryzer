@@ -21,6 +21,14 @@ ${pickRandom([`no puedo esta contra las política del grupo.😸`, `_uff miren u
 `.trim()
 conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
 
+ }
+
+if (/^a$/i.test(m.text) ) { //sin prefijo 
+    let teks = `
+${pickRandom([`Que bueno sabe la letra A`, `AAAAAA`])}
+`.trim()
+conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
+
 }*/
 
 if (/^reglas|normas|Reglas$/i.test(m.text) ) { //sin prefijo 
