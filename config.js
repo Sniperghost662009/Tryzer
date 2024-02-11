@@ -26,7 +26,7 @@ global.prems = []
 global.packname = ''
 global.author = '{\n "bot": {\n   "name": "Tryzer",\n     "author": "Tryzer Snipe",\n   "status_bot": "active"\n }\n}'
 global.desc = 'Simple WhatsApp Bot Multi Device'
-global.namebot = '© Ai Hoshino - MD / Nakano - Team'
+global.namebot = '© TryzerBot- MD / Nakano - Team'
 global.wait = '*Cargando. . .*'
 global.gcname = 'TryzerBot- MD'
 global.wm = ''
@@ -41,7 +41,7 @@ global.moment = moment
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-global.imgmenu = fs.readFileSync('./menu.png') 
+global.imgmenu = fs.readFileSync('./Menu.png') 
 global.ytlogo = fs.readFileSync('./Menu2.jpg') 
 global.miniurl = fs.readFileSync('./Menu3.jpg') 
 global.catalogo = fs.readFileSync('./storage/img/catalogo.png')
