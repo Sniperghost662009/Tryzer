@@ -1,143 +1,80 @@
-import {watchFile, unwatchFile} from 'fs';
-import chalk from 'chalk';
-import {fileURLToPath} from 'url';
-import fs from 'fs'; 
-import cheerio from 'cheerio';
-import fetch from 'node-fetch';
-import axios from 'axios';
-import moment from 'moment-timezone';
-
-global.botnumber = "" //Ejemplo: +59309090909
-global.confirmCode = ""
+import { watchFile, unwatchFile } from "fs"
+import chalk from "chalk"
+import { fileURLToPath } from "url"
+import fs from "fs"
+import cheerio from "cheerio"
+import fetch from "node-fetch"
+import axios from "axios"
+import moment from "moment-timezone"
+ 
+//⊱ ━━━━.⋅ Añada los numeros a ser Propietario/a ⋅.━━━ ⊰  
 
 global.owner = [
-  ['18199751245', '👑   Creador 👑', true],
-  ['524922108173', '  Collaborator 1 💫', true],
-  ['', '  - Collaborator 2 ', true],
-  ['', '  - Collaborator 3 ', true],
-  ['', ' - Collaborator 4 ', true],
-  ['', '  - Collaborator 5 ', true],
-  ['', '  - Collaborator 6 ', true],
-  ['', '  - Collaborator 7 ', false],
-  ['', '  - Collaborator 8 ', true],
-  ['','  - Tester ', true],
-  [''],
-  [''],
-  [''],
-  [''],
-  [''],
-  [''],
-  [''],
-  [''], 
-  [''],  
-  [''],
+  ['524922108173', 'TryzerSnipe', true],
+  ['18199751245'],
   [''],
   ['']
-];
+] //Numeros de owner 
 
-global.suittag = [''];
-global.prems = [''];
-//━━━━━━━STICKERS━━━━━━━━━━━━ 
-global.packname = 'TryzerBot';
-global.author = 'ʙʏ Snipe';
-//━━━━━━━━━━━━━━━━━━━━━━ 
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-global.wm = 'TryzerBot';
-global.titulowm = 'TryzerBot';
-global.titulowm2 = `TryzerBot`
-global.igfg = 'TryzerBot';
-global.wait = '*Cargando...*';
-//━━━━━━━IMAGENES━━━━━━━━━━━━ 
-global.imagen1 = fs.readFileSync('./Menu2.jpg');
-global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
-global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
-global.imagen4 = fs.readFileSync('./Menu.png');
-global.imagen5 = fs.readFileSync('./src/+18.jpg');
-global.imagen6 = fs.readFileSync('./Menu3.png');
-//━━━━━━IMAGENES 2━━━━━━━━━━ 
+global.mods = []
+global.prems = []
 
-global.imgmenu = fs.readFileSync('./Menu3.png') 
-global.ytlogo = fs.readFileSync('./Menu3.png') 
-global.miniurl = fs.readFileSync('./Menu.png') 
-global.catalogo = fs.readFileSync('./storage/img/catalogo.png')
-global.thumbnail = fs.readFileSync('./Menu.png')
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-//━━━━━━━━━━━━━━━
+global.packname = ''
+global.author = '{\n "bot": {\n   "name": "Tryzer",\n     "author": "Tryzer Snipe",\n   "status_bot": "active"\n }\n}'
 global.desc = 'Simple WhatsApp Bot Multi Device'
+global.namebot = '© Ai Hoshino - MD / Nakano - Team'
+global.wait = '*Cargando. . .*'
+global.gcname = 'TryzerBot- MD'
+global.wm = ''
+
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
+
+global.cheerio = cheerio
+global.fs = fs
+global.fetch = fetch
+global.axios = axios
+global.moment = moment
+
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
+
+global.imgmenu = fs.readFileSync('./menu.png') 
+global.ytlogo = fs.readFileSync('./Menu2.jpg') 
+global.miniurl = fs.readFileSync('./Menu3.jpg') 
+global.catalogo = fs.readFileSync('./storage/img/catalogo.png')
+global.thumbnail = fs.readFileSync('./Menu.jpg')
+
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
+
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Ai Hoshino - MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
 global.group = 'https://chat.whatsapp.com/GR9pMnqYI8DB9HoJnl2HkB'
-//━━━━━━━MARCA━━━━━━━━ 
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Jotchua-Bot', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fgif = { key: {participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":`${wm}`, "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `${packname}\n      ${wm}`, 'jpegThumbnail': catalogo }}}
-global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf']
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-//━━━━━━━━━━━━━━━━━━━━━━ 
+global.adanime = `🌸 | Anime By Ai Hoshino - MD 🈴` 
+global.addescargas = `📤 | Descargas By Tryzer - MD `
+global.adimagen = `🌅 | Imágenes By Tryzer- MD 🌿` 
+global.adyoutube = `🍁 | Descargas de YouTube 📤` 
+global.adsticker = `🏞️ | Stickers By Tryzer - MD 🌺` 
+global.adsearch  = `🔎 | Busquedas By Tryzer - MD 🐢` 
+global.adnsfw = `🔞 | Nsfw By Tryzer- MD ⭐`
 
-global.addescargas = `TryzerBot ʙʏ snipe`
-global.adimagen = `TryzerBot ʙʏ snipe` 
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-//━━━━━━━━━━━━━━━━━━━━━━ 
+global.multiplier = 69 
+global.maxwarn = '2' // máxima advertencias
 
-global.mods = [];
+//━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-//Reacciones
-global.rwait = '⏰'
-global.done = '✅'
-global.error = '❌'
-
-global.nn = 'https://atom.bio/Tryzer'
-//━━━━━━━━━━━━━━━━━━━━━━ 
-//* *******Tiempo***************
-global.d = new Date(new Date + 3600000);
-global.locale = 'es';
-global.dia = d.toLocaleDateString(locale, {weekday: 'long'});
-global.fecha = d.toLocaleDateString('es', {day: 'numeric', month: 'numeric', year: 'numeric'});
-global.mes = d.toLocaleDateString('es', {month: 'long'});
-global.año = d.toLocaleDateString('es', {year: 'numeric'});
-global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
-//* ****************************
-global.wm2 = `${dia} ${fecha}\nTryzerBot`;
-global.gt = 'TryzerBot';
-global.mysticbot = 'TryzerBot';
-global.md = 'https://atom.bio/Tryzer';
-global.mysticbot = 'https://atom.bio/Tryzer';
-global.lolkey = 'Papah-Chan' //biar mudah ngegantinya semisal apikeynya expired:v
-global.zenzkey = 'BagasPrdn' //ganti jadi apikey lu kalau expired
-global.waitt = '*▬▭▭▭*';
-global.waittt = '*▬▬▭▭*';
-global.waitttt = '*▬▬▬▬*';
-global.nomorown = '5491156673266';
-global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
-global.cmenut = '❖––––––『';
-global.cmenub = '┊✦ ';
-global.cmenuf = '╰━═┅═━––––––๑\n';
-global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     ';
-global.dmenut = '*❖─┅──┅〈*';
-global.dmenub = '*┊»*';
-global.dmenub2 = '*┊*';
-global.dmenuf = '*╰┅────────┅✦*';
-global.htjava = '⫹⫺';
-global.htki = '*⭑•̩̩͙⊱•••• ☪*';
-global.htka = '*☪ ••••̩̩͙⊰•⭑*';
-global.comienzo = '• • ◕◕════';
-global.fin = '════◕◕ • •';
-global.botdate = `*[ 📅 ] Fecha:*  ${moment.tz('America/Mexico_City').format('DD/MM/YY')}`;
-global.bottime = `*[ ⏳ ] Hora:* ${moment.tz('America/Mexico_City').format('HH:mm:ss')}`;
-global.fgif = {key: {participant: '0@s.whatsapp.net'}, message: {'videoMessage': {'title': wm, 'h': `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.png')}}};
-global.multiplier = 99;
-global.flaaa = [
-  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
-  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
-  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&doScale=true&scaleWidth=800&scaleHeight=500&text=',
-  'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
-  'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=',
-];
-//* ************************
-
-const file = fileURLToPath(import.meta.url);
+let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
-  unwatchFile(file);
-  console.log(chalk.redBright('Update \'config.js\''));
-  import(`${file}?update=${Date.now()}`);
-});
+  unwatchFile(file)
+  console.log(chalk.redBright("Update 'config.js'"))
+  import(`${file}?update=${Date.now()}`)
+})
