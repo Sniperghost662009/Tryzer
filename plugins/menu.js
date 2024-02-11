@@ -132,8 +132,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let replace = {
       '%': '%',
       p: _p, uptime, muptime,
-      taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
-      wasp: '@0',
       me: conn.getName(conn.user.jid),
       npmname: _package.name,
       version: _package.version,
