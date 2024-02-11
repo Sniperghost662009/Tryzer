@@ -28,7 +28,7 @@ const defaultMenu = {
   before: `
 *─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-Hola *%taguser*, soy *Tryzer*, en que puedo ayudarte hoy?
+Hola *%taguser*, soy *Ai Hoshino*, en que puedo ayudarte hoy?
 
 ╭────═[ *I N F O  -  U S E R* ]═─────⋆
 │╭───────────────···
@@ -90,6 +90,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
       return {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
