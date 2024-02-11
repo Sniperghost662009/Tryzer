@@ -64,12 +64,6 @@ global.thumbnail = fs.readFileSync('./Menu.png')
 //━━━━━━━━━━━━━━━
 global.desc = 'Simple WhatsApp Bot Multi Device'
 
-//━━━━━━━MARCA━━━━━━━━ 
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : 1, status: 1, surface : 1, message: 'Snipe siempre  presente', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
-
-global.fgif = { key: {participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":`${wm}`, "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `${packname}\n      ${wm}`, 'jpegThumbnail': catalogo }}}
-
-//━━━━━━━━━━━━━━━━━━━━━━ 
 
 global.addescargas = `Tryzer ʙʏ Snipe`
 global.adimagen = `Tryzer ʙʏ Snipe` 
