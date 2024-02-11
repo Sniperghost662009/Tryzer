@@ -139,8 +139,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg,
       readmore: readMore
-  
-    let pp = 'https://telegra.ph/file/6588268dc27807d259026.mp4'
+  }
+    text = text.replace(new RegExp(%(${Object.keys(replace).sort((a, b) => b.length - a.length).join|}), 'g'), (_, name) => '' + replace[name])
+   
+   let pp = 'https://telegra.ph/file/6588268dc27807d259026.mp4'
     let pp2 = 'https://telegra.ph/file/6588268dc27807d259026.mp4'
     conn.sendMessage(m.chat, { video: { url: [pp, pp2].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
     
