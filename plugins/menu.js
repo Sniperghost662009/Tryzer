@@ -41,7 +41,6 @@ Hola *%taguser*,
 ┆🔰 *ɴɪᴠᴇʟ* : %level
 ┆✨ *xᴘ* : %totalexp
 ╰━─━─━─≪ɪɴꜰᴏ ᴜꜱᴇʀ≫─━─━─━╯
-%readmore
 ──────────────────────
 
 *LAS MAMADAS QUE PUEDES HACER CON EL BOT*
