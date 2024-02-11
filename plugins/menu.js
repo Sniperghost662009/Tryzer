@@ -3,25 +3,6 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
-let tags = {
-  'main': '📄 ɪɴꜰᴏ 📄',
-  'game': '🎮 ᴊᴜᴇɢᴏꜱ 🎮',
-  'serbot': '🤖 ꜱᴜʙ ʙᴏᴛꜱ 🤖',
-  'rpg': '💸ᴇᴄᴏɴᴏᴍɪᴀ💸',
-  'rg': '📊ʀᴇɢɪꜱᴛʀᴏ📊',
-  'downloader': '📥ᴅᴇꜱᴄᴀʀɢᴀꜱ📤',
-//  'marker': 'LOGO - MAKER',
-  'nable': 'ᴀᴄᴛɪᴠᴀᴅᴏʀᴇꜱ📋',
-  'group': '🌱 ɢʀᴜᴘᴏꜱ 🌱',
-  'search': '🔎ʙᴜꜱᴄᴀᴅᴏʀ🔍',
-  'img': '🖼ɪᴍᴀɢᴇɴᴇꜱ🖼',
-  'tools': 'ʜᴇʀʀᴀᴍɪᴇɴᴛᴀꜱ🔧',
-  'fun': '🎉ᴅɪᴠᴇʀꜱɪᴏɴ🎉',
-  'audio': 'ᴇꜰᴇᴄᴛᴏꜱ ᴅᴇ ᴀᴜᴅɪᴏꜱ', 
-  'sticker': '🧸ꜱᴛɪᴄᴋᴇʀꜱ🧸',
-  'owner': '🇮🇩 ᴄʀᴇᴀᴅᴏʀ 🇮🇩',
-  'advanced': 'ᴀᴠᴀɴᴢᴀᴅᴏ',
-}
 
 const defaultMenu = {
   before: `
