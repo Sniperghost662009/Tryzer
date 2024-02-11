@@ -100,7 +100,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         limit: plugin.limit,
         premium: plugin.premium,
         enabled: !plugin.disabled,
-      }
+
     })
     for (let plugin of help)
       if (plugin && 'tags' in plugin)
@@ -139,6 +139,16 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg,
       readmore: readMore
+      p: _p, uptime, muptime,
+      taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
+      wasp: '@0',
+      me: conn.getName(conn.user.jid),
+      npmname: _package.name,
+      version: _package.version,
+      npmdesc: _package.description,
+      npmmain: _package.main,
+      author: _package.author.name,
+      license: _package.license
   }
     text = text.replace(new RegExp(%(${Object.keys(replace).sort((a, b) => b.length - a.length).join|}), 'g'), (_, name) => '' + replace[name])
    
