@@ -45,7 +45,7 @@ global.imgmenu = fs.readFileSync('./Menu.png')
 global.ytlogo = fs.readFileSync('./Menu2.jpg') 
 global.miniurl = fs.readFileSync('./Menu3.png') 
 global.catalogo = fs.readFileSync('./storage/img/catalogo.png')
-global.thumbnail = fs.readFileSync('./Menu.jpg')
+global.thumbnail = fs.readFileSync('./Menu.png')
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
